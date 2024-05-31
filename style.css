@@ -121,17 +121,17 @@ input:checked + label .row {
 }
 
 .card[for="c1"] {
-    background-image: url('/images/autumn.jpg');
+    background-image: url('./images/autumn.jpg');
 }
 
 .card[for="c2"] {
-    background-image: url('/images/winter.jpg');
+    background-image: url('./images/winter.jpg');
 }
 
 .card[for="c3"] {
-    background-image: url('/images/spring.jpg');
+    background-image: url('./images/spring.jpg');
 }
 
 .card[for="c4"] {
-    background-image: url('/images/summer.jpg');
+    background-image: url('./images/summer.jpg');
 }
