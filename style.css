@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    height: 100vh;
+    width: 100%;
+    background-color: #d6d6d6;
+    flex-direction: column;
+    gap: 4vmax;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main > p {
+    color: #0000006e;
+    font-weight: 500;
+    font-size: 1vmax;
+}
+
+#container {
+    height: 30vmax;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.card {
+    width: 4vmax;
+    border-radius: 1vmax;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 0 1vmax;
+    display: flex;
+    align-items: flex-end;
+    transition: 0.6s;
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+}
+
+.card > .row {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 3vmax;
+    background-color: transparent;
+    transition: 0.6s;
+}
+
+.card > .row > .icon {
+    background-color: #222222;
+    color: #fff;
+    border-radius: 50%;
+    height: 2.6vmax;
+    width: 2.6vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.7vmax;
+    font-size: 1vmax;
+    /* opacity: 0; */
+}
+
+.card > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 8vmax;
+    width: 50vmax;
+    opacity: 0;
+    transform: translateY(10vmax);
+    transition-delay: 0.3s;
+    transition: 0.3s;
+}
+
+.description p {
+    font-size: 0.9vmax;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #ffffffd2;
+    padding-top: 1vmax;
+}
+
+.description h1 {
+    color: #fff;
+    font-size: 2vmax;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 40vmax;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+input:checked + label .row {
+    background-color: #0000005b;
+}
+
+.card[for="c1"] {
+    background-image: url('/images/autumn.jpg');
+}
+
+.card[for="c2"] {
+    background-image: url('/images/winter.jpg');
+}
+
+.card[for="c3"] {
+    background-image: url('/images/spring.jpg');
+}
+
+.card[for="c4"] {
+    background-image: url('/images/summer.jpg');
+}
